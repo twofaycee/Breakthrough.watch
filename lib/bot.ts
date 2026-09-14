@@ -1,2 +1,2 @@
-export async function analyzeCatalog(f:any[]){return {total:f.length}}
-export async function generateStrategicPlan(a:any){return {weeklyPlan:[],actions:[{data:{genre:'Drama',prompt:'Breakthrough Drama',releaseAt:new Date(Date.now()+2*60*60*1000).toISOString()}}]}}
+export async function analyzeCatalog(f:any[]){const total=f.length;const genres=f.reduce((a:any,c)=>{a[c.genre]=(a[c.genre]||0)+1;return a},{});return {total,genres,live:f.filter((x:any)=>x.status!=='archived').length}}
+export async function generateStrategicPlan(a:any){return {weeklyPlan:[{day:'Monday',genre:'Drama',reason:'Highest retention'},{day:'Wednesday',genre:'Sci-Fi',reason:'Trending'}],actions:[{type:'schedule_release',data:{genre:'Drama',prompt:'Breakthrough.ai original drama about family secrets, cinematic 4k',releaseAt:new Date(Date.now()+2*60*60*1000).toISOString()}}]}}
