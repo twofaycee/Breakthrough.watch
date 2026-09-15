@@ -1,0 +1,2 @@
+import Link from 'next/link'
+export default function Pricing(){return <main className="min-h-screen bg-[#07070b] p-8 text-white"><Link href="/" className="text-sm text-white/50">← BREAKTHROUGH</Link><div className="mx-auto max-w-5xl py-24"><p className="text-xs uppercase tracking-[.3em] text-indigo-300">BREAKTHROUGH PRO</p><h1 className="mt-4 text-5xl font-semibold">$9.99 / month</h1><p className="mt-5 max-w-xl text-white/55">No ads. Built for the full Breakthrough experience.</p></div></main>}
